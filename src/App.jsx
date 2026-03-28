@@ -4,9 +4,9 @@ function App() {
   return (
     <div className="p-8 bg-white min-h-screen text-black">
       <h1 className="text-3xl font-bold mb-6 border-b-2 border-black pb-2">
-        Game Collections
+        My Game Collection Gwej
       </h1>
-      <div className="grid gap-4">
+      <div className="grid grid-cols-5 gap-4">
         {gameList.map((gameItem) => (
           <GameCard key={gameItem.id} game={gameItem} />
         ))}
