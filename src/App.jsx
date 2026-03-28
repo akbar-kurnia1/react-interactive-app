@@ -1,16 +1,17 @@
 import { gameList } from "./dataGames";
 import GameCard from "./components/GameCard";
+import Navbar from "./components/Navbar";
 function App() {
   return (
-    <div className="p-8 bg-white min-h-screen text-black">
-      <h1 className="text-3xl font-bold mb-6 border-b-2 border-black pb-2">
-        My Game Collections
-      </h1>
-      <div className="grid grid-cols-5 gap-4">
+    <div className=" bg-white min-h-screen text-black">
+      <Navbar totalGames={gameList.length} />
+      <div className="px-4 md:px-8 pb-8">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {gameList.map((gameItem) => (
           <GameCard key={gameItem.id} game={gameItem} />
         ))}
       </div>
+    </div>
     </div>
   );
 }
