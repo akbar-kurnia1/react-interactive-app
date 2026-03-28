@@ -20,7 +20,9 @@ export default function GameCard({ game }) {
         className="w-full h-auto aspect-3/4 object-cover border border-black mb-3" 
       />
       <div className="flex flex-col items-center w-full text-center gap-1.5">
-        <h2 className="text-base font-bold line-clamp-2">{game.name}</h2>
+      <h2 className="text-base font-bold line-clamp-2 min-h-12 flex items-center justify-center w-full">
+        {game.name}
+        </h2>
         <p className="text-xs text-gray-700">{game.genre}</p>
         <button 
           onClick={() => setIsFavorite(!isFavorite)}
