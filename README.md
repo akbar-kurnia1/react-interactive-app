@@ -1,16 +1,19 @@
-# React + Vite
+# My Game Collections 
+This project is a simple interactive web application styled like a Steam Library (not really). It was built to fulfill the Meeting 5 Assignment (Basic State Management) for the Frontend Development division of GDGoC.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tech Stack
+- **Framework:** React.js (Vite)
+- **Styling:** Tailwind CSS
+- **Language:** JavaScript
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```text
+src/
+├── components/
+│   ├── GameCard.jsx   Card component displaying game info, rating counter, and favorite status
+│   └── Navbar.jsx     Responsive navigation bar component
+├── dataGames.js       Contains the dummy data array for the game list
+├── App.jsx            Main parent component managing the grid layout
+├── main.jsx           React application entry point
+└── index.css          Tailwind CSS base configuration
