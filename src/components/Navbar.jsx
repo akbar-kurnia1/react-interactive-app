@@ -1,4 +1,4 @@
-export default function Navbar({ totalGames }) {
+export default function Navbar({ totalFavorites }) {
     return (
         <nav className="border-b-2 border-black bg-white px-4 md:px-8 py-4 mb-6 flex flex-col md:flex-row gap-4 justify-between items-center">
         <div className="font-bold text-2xl">
@@ -12,7 +12,7 @@ export default function Navbar({ totalGames }) {
         </div>
 
         <div className="border-2 border-black px-3 py-1 font-bold text-sm bg-gray-200">
-          Total Games: {totalGames}
+          <span>⭐</span> Favorites: {totalFavorites}
         </div>
   
       </nav>
