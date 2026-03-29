@@ -1,5 +1,5 @@
 import {useState} from "react";
-export default function GameCard({ game }) {
+export default function GameCard({ game, onFavoriteChange }) {
     const [isFavorite, setIsFavorite] = useState(false);
     const [rating, setRating] = useState(0);
     const handleIncrease = () => {
@@ -12,6 +12,11 @@ export default function GameCard({ game }) {
             setRating(rating - 1);
         }
     }
+    const toggleFavorite = () => {
+      const newStatus = !isFavorite;
+      setIsFavorite(newStatus);
+      onFavoriteChange(newStatus);
+    };
     return (
         <div className="border-2 border-black bg-white flex flex-col items-center p-3 h-full">
       <img 
@@ -25,7 +30,7 @@ export default function GameCard({ game }) {
         </h2>
         <p className="text-xs text-gray-700">{game.genre}</p>
         <button 
-          onClick={() => setIsFavorite(!isFavorite)}
+          onClick={toggleFavorite}
           className="text-xl cursor-pointer"
         >
           {isFavorite ? '⭐' : '☆'}
